@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grocery Store</title>
+  <link rel="stylesheet" href="./Grocery.css">
+</head>
+<body>
+  
+  <form>
+    <header>
+      <span>
+        <img alt="logo" src="./195900_4172244_660268_image.jpg" class="center logo" id="logo"
+      </span>
+      <h1>MNK Grocery Store</h1>
+    </header> 
+    <article class="invoicebody">
+	    <div class="left_info">
+	      <input type="text" class="clientDetails" id="company_name"  placeholder="Customer Name"><br><br><br>
+	      <input type="text" class="clientDetails" id="customer_name" placeholder="Contact Number"><br><br><br>
+	      <input type="text" class="clientDetails" id="occupation" placeholder="Address"><br><br><br>
+	      <input type="text" class="clientDetails" id="doy" placeholder="Email"><br><br><br>
+		</div>
+      <table class="meta" id="top_data_table">
+         <tbody>
+          <tr class="" id="invoice_number_row">
+            <th class="bold"><span class="invoice" id="invoice">Time</span></th> 
+            <td id="time"></td> 
+          </tr>
+          <tr id="daterow">
+            <th class="bold"><span class="date" id="date">Date</span></th>
+            <td><span contenteditable=""><input type="date" id="theDate"></span></td>
+          </tr>
+          <tr class="" id="total_block">
+            <th class="bold"><span class="amount" id="amount">Total Amount</span></th>
+            <td><span id="prefix">&#8377;</span><span></span></td>
+          </tr>
+        </tbody>
+      </table>
+	<div class="min_height">
+      <table class="inventory">
+        <thead>
+          <tr>
+            <th class="bold">
+              <span class="item" id="item">Product ID</span>
+            </th>
+            <th class="bold">
+              <span class="description" id="description">Product Name</span>
+            </th>
+            <th class="bold">
+              <span class="rate" id="rate">Price </span>
+            </th>
+            <th class="bold">
+              <span class="quantity" id="quantity">Quantity</span>
+            </th>
+            <th class="bold">
+              <span class="price" id="price">Total Price</span>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <a class="cut" title="Remove Item">-</a>
+              <span contenteditable></span>
+            </td>
+            <td>
+              <span contenteditable></span>
+              </td>
+            <td>
+              <span data-prefix>&#8377;</span>
+              <span contenteditable>0.00</span>
+            </td>
+            <td>
+              <span contenteditable>1</span>
+            </td>
+            <td>
+              <span data-prefix>&#8377;</span><span>0.00</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <a class="add noprint" title="Add Item">+</a>
+      <div class="left_btn">
+      		<button class="mah_btn" onclick="myprint()">Print</button>
+      		<button class="mah_btn" onClick="window.location.reload()">Reset</button>
+      </div>
+      <div class="right_tax">
+      <table class="balance" id="balance">
+        <tbody>
+
+          <tr>
+            <th class="bold">
+              <span class="subtotal" id="subtotal">Subtotal</span>
+            </th>
+            <td>
+              <span>&#8377;</span><span>0.00</span>
+            </td>
+          </tr>
+
+          <tr>
+            <th class="bold">
+              <span class="tax" id="tax" contenteditable="">Include GST&nbsp;</span>
+              <span contenteditable="">18</span>%
+            </th>
+            <td>
+              <span>&#8377;</span><span>0.00</span>
+            </td>
+          </tr>
+
+          <tr>
+            <th class="bold">
+              <span class="total" id="total">Total</span>
+            </th>
+            <td>
+              <span>0.00</span>
+            </td>
+          </tr>
+
+        </tbody>
+      </table> 
+      </div>     
+	</div>
+    </article>
+  </form>
+
+
+
+<script src="./Grocery.js"></script>
+
+</body>
+</html>
